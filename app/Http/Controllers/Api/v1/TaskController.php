@@ -38,20 +38,25 @@ class TaskController extends Controller
             }
         }
     }
-    public function update(Request $req, Task $task)
+    public function update(Request $req, $task)
     {
-        $task = Task::find($task);
-        $task->title=$req->title;
-        $task->description=$req->description;
-        $task->status=$req->status;
-        $task->project_id=$req->project_id;
-        $task->user_id=$req->user_id;
-        $result=$task->save();
-        if($result) {
-          return 'file updated';
+        if(!in_array($req->status, ['IN_PROGRESS', 'READY_FOR_TEST', 'COMPLETED'])){
+            return "You must provide task status from following ['IN_PROGRESS', 'READY_FOR_TEST', 'COMPLETED']";
         }
-        else {
-          return 'failed';
+        else{
+            $task = Task::find($task);
+            $task->title=$req->title;
+            $task->description=$req->description;
+            $task->status=$req->status;
+            $task->project_id=$req->project_id;
+            $task->user_id=$req->user_id;
+            $result=$task->save();
+            if($result) {
+              return 'file updated';
+            }
+            else {
+              return 'failed';
+            }
         }
     }
     public function patch(Request $req, $task)

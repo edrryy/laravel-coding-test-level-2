@@ -82,7 +82,7 @@ class ProjectController extends Controller
         }
 
     }
-    public function destroy($project)
+    public function destroy(Request $req, $project)
     {
         if($req->role != '2'){
             return 'You must be an PRODUCT_OWNER to continue updating projects.';
