@@ -71,9 +71,9 @@ class TaskController extends Controller
             }
         }
     }
-    public function destroy(Task $task)
+    public function destroy($task)
     {
-        $user = Task::find($task);
+        $task = Task::find($task);
         $result = $task->delete();
         if($result){
           return "records has been deleted";
