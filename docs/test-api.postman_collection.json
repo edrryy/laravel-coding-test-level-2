@@ -1,0 +1,828 @@
+{
+	"info": {
+		"_postman_id": "cb72061d-8245-4856-aee0-152c91854a2f",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://laravel-coding-test-level-2.test/api/v1/users",
+					"protocol": "http",
+					"host": [
+						"laravel-coding-test-level-2",
+						"test"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get single user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://laravel-coding-test-level-2.test/api/v1/users/2",
+					"protocol": "http",
+					"host": [
+						"laravel-coding-test-level-2",
+						"test"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add new user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://laravel-coding-test-level-2.test/api/v1/users?username=test&password=password&name=test name&email=test@gmail.com&role=2",
+					"protocol": "http",
+					"host": [
+						"laravel-coding-test-level-2",
+						"test"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "test"
+						},
+						{
+							"key": "password",
+							"value": "password"
+						},
+						{
+							"key": "name",
+							"value": "test name"
+						},
+						{
+							"key": "email",
+							"value": "test@gmail.com"
+						},
+						{
+							"key": "role",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update user info",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://laravel-coding-test-level-2.test/api/v1/users/2?username=test2&name=name2&email=test2@gmail.com&role=2&password=passw",
+					"protocol": "http",
+					"host": [
+						"laravel-coding-test-level-2",
+						"test"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"2"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "test2"
+						},
+						{
+							"key": "name",
+							"value": "name2"
+						},
+						{
+							"key": "email",
+							"value": "test2@gmail.com"
+						},
+						{
+							"key": "role",
+							"value": "2"
+						},
+						{
+							"key": "password",
+							"value": "passw"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Patch user info",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "http://laravel-coding-test-level-2.test/api/v1/users/2?name=name3",
+					"protocol": "http",
+					"host": [
+						"laravel-coding-test-level-2",
+						"test"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"2"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "test2",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "name3"
+						},
+						{
+							"key": "email",
+							"value": "test2@gmail.com",
+							"disabled": true
+						},
+						{
+							"key": "role",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "passw",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://laravel-coding-test-level-2.test/api/v1/users/2",
+					"protocol": "http",
+					"host": [
+						"laravel-coding-test-level-2",
+						"test"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all project",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://laravel-coding-test-level-2.test/api/v1/projects",
+					"protocol": "http",
+					"host": [
+						"laravel-coding-test-level-2",
+						"test"
+					],
+					"path": [
+						"api",
+						"v1",
+						"projects"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get single project",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://laravel-coding-test-level-2.test/api/v1/projects/1",
+					"protocol": "http",
+					"host": [
+						"laravel-coding-test-level-2",
+						"test"
+					],
+					"path": [
+						"api",
+						"v1",
+						"projects",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add new project",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://laravel-coding-test-level-2.test/api/v1/projects?role=2&name=Project Test&user_id=2",
+					"protocol": "http",
+					"host": [
+						"laravel-coding-test-level-2",
+						"test"
+					],
+					"path": [
+						"api",
+						"v1",
+						"projects"
+					],
+					"query": [
+						{
+							"key": "role",
+							"value": "2"
+						},
+						{
+							"key": "name",
+							"value": "Project Test"
+						},
+						{
+							"key": "user_id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update project info",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://laravel-coding-test-level-2.test/api/v1/projects/1?role=2&name=Change Project Test&user_id=2&created_by=2",
+					"protocol": "http",
+					"host": [
+						"laravel-coding-test-level-2",
+						"test"
+					],
+					"path": [
+						"api",
+						"v1",
+						"projects",
+						"1"
+					],
+					"query": [
+						{
+							"key": "role",
+							"value": "2"
+						},
+						{
+							"key": "name",
+							"value": "Change Project Test"
+						},
+						{
+							"key": "user_id",
+							"value": "2"
+						},
+						{
+							"key": "created_by",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Patch project info",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "http://laravel-coding-test-level-2.test/api/v1/projects/1?role=2&name=Change Project Test 2",
+					"protocol": "http",
+					"host": [
+						"laravel-coding-test-level-2",
+						"test"
+					],
+					"path": [
+						"api",
+						"v1",
+						"projects",
+						"1"
+					],
+					"query": [
+						{
+							"key": "role",
+							"value": "2"
+						},
+						{
+							"key": "name",
+							"value": "Change Project Test 2"
+						},
+						{
+							"key": "user_id",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "created_by",
+							"value": "2",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete single project",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://laravel-coding-test-level-2.test/api/v1/projects/1?role=2",
+					"protocol": "http",
+					"host": [
+						"laravel-coding-test-level-2",
+						"test"
+					],
+					"path": [
+						"api",
+						"v1",
+						"projects",
+						"1"
+					],
+					"query": [
+						{
+							"key": "role",
+							"value": "2"
+						},
+						{
+							"key": "created_by",
+							"value": "2",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all project users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://laravel-coding-test-level-2.test/api/v1/projectuser",
+					"protocol": "http",
+					"host": [
+						"laravel-coding-test-level-2",
+						"test"
+					],
+					"path": [
+						"api",
+						"v1",
+						"projectuser"
+					],
+					"query": [
+						{
+							"key": "created_by",
+							"value": "2",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get single project users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://laravel-coding-test-level-2.test/api/v1/projectuser/1",
+					"protocol": "http",
+					"host": [
+						"laravel-coding-test-level-2",
+						"test"
+					],
+					"path": [
+						"api",
+						"v1",
+						"projectuser",
+						"1"
+					],
+					"query": [
+						{
+							"key": "created_by",
+							"value": "2",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Assign project users",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://laravel-coding-test-level-2.test/api/v1/projectuser?role=2&project_id=1&user_id=2",
+					"protocol": "http",
+					"host": [
+						"laravel-coding-test-level-2",
+						"test"
+					],
+					"path": [
+						"api",
+						"v1",
+						"projectuser"
+					],
+					"query": [
+						{
+							"key": "role",
+							"value": "2"
+						},
+						{
+							"key": "project_id",
+							"value": "1"
+						},
+						{
+							"key": "user_id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update assigned project users",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://laravel-coding-test-level-2.test/api/v1/projectuser?role=2&project_id=2&user_id=2",
+					"protocol": "http",
+					"host": [
+						"laravel-coding-test-level-2",
+						"test"
+					],
+					"path": [
+						"api",
+						"v1",
+						"projectuser"
+					],
+					"query": [
+						{
+							"key": "role",
+							"value": "2"
+						},
+						{
+							"key": "project_id",
+							"value": "2"
+						},
+						{
+							"key": "user_id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Patch assigned project users",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "http://laravel-coding-test-level-2.test/api/v1/projectuser?role=2&user_id=3",
+					"protocol": "http",
+					"host": [
+						"laravel-coding-test-level-2",
+						"test"
+					],
+					"path": [
+						"api",
+						"v1",
+						"projectuser"
+					],
+					"query": [
+						{
+							"key": "role",
+							"value": "2"
+						},
+						{
+							"key": "project_id",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "user_id",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete assigned project users",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://laravel-coding-test-level-2.test/api/v1/projectuser/1?role=2",
+					"protocol": "http",
+					"host": [
+						"laravel-coding-test-level-2",
+						"test"
+					],
+					"path": [
+						"api",
+						"v1",
+						"projectuser",
+						"1"
+					],
+					"query": [
+						{
+							"key": "role",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all tasks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://laravel-coding-test-level-2.test/api/v1/tasks",
+					"protocol": "http",
+					"host": [
+						"laravel-coding-test-level-2",
+						"test"
+					],
+					"path": [
+						"api",
+						"v1",
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get single task",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://laravel-coding-test-level-2.test/api/v1/tasks",
+					"protocol": "http",
+					"host": [
+						"laravel-coding-test-level-2",
+						"test"
+					],
+					"path": [
+						"api",
+						"v1",
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://laravel-coding-test-level-2.test/api/v1/tasks?role=2&title=Task Title Test&description=Task Description Test&project_id=2&user_id=2",
+					"protocol": "http",
+					"host": [
+						"laravel-coding-test-level-2",
+						"test"
+					],
+					"path": [
+						"api",
+						"v1",
+						"tasks"
+					],
+					"query": [
+						{
+							"key": "role",
+							"value": "2"
+						},
+						{
+							"key": "title",
+							"value": "Task Title Test"
+						},
+						{
+							"key": "description",
+							"value": "Task Description Test"
+						},
+						{
+							"key": "project_id",
+							"value": "2"
+						},
+						{
+							"key": "user_id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update task",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://laravel-coding-test-level-2.test/api/v1/tasks/2?role=2&title=Task Title Test 2 &description=Task Description Test 2&project_id=2&user_id=2&status=IN_PROGRESS",
+					"protocol": "http",
+					"host": [
+						"laravel-coding-test-level-2",
+						"test"
+					],
+					"path": [
+						"api",
+						"v1",
+						"tasks",
+						"2"
+					],
+					"query": [
+						{
+							"key": "role",
+							"value": "2"
+						},
+						{
+							"key": "title",
+							"value": "Task Title Test 2 "
+						},
+						{
+							"key": "description",
+							"value": "Task Description Test 2"
+						},
+						{
+							"key": "project_id",
+							"value": "2"
+						},
+						{
+							"key": "user_id",
+							"value": "2"
+						},
+						{
+							"key": "status",
+							"value": "IN_PROGRESS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Patch task",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "http://laravel-coding-test-level-2.test/api/v1/tasks/2?status=COMPLETED",
+					"protocol": "http",
+					"host": [
+						"laravel-coding-test-level-2",
+						"test"
+					],
+					"path": [
+						"api",
+						"v1",
+						"tasks",
+						"2"
+					],
+					"query": [
+						{
+							"key": "role",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "title",
+							"value": "Task Title Test 2 ",
+							"disabled": true
+						},
+						{
+							"key": "description",
+							"value": "Task Description Test 2",
+							"disabled": true
+						},
+						{
+							"key": "project_id",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "user_id",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "status",
+							"value": "COMPLETED"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete task",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://laravel-coding-test-level-2.test/api/v1/tasks/2",
+					"protocol": "http",
+					"host": [
+						"laravel-coding-test-level-2",
+						"test"
+					],
+					"path": [
+						"api",
+						"v1",
+						"tasks",
+						"2"
+					],
+					"query": [
+						{
+							"key": "role",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "title",
+							"value": "Task Title Test 2 ",
+							"disabled": true
+						},
+						{
+							"key": "description",
+							"value": "Task Description Test 2",
+							"disabled": true
+						},
+						{
+							"key": "project_id",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "user_id",
+							"value": "2",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
