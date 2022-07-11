@@ -19,58 +19,81 @@ class ProjectController extends Controller
     }
     public function create(Request $req)
     {
-        $project = new Project;
-        $project->name=$req->name;
-        $project->created_by=$req->user_id;
-        $result=$project->save();
-        if($result) {
-          return 'file created';
+        if($req->role != '2'){
+            return 'You must be an PRODUCT_OWNER to continue creating projects.';
         }
-        else {
-          return 'failed';
+        else{
+          $project = new Project;
+          $project->name=$req->name;
+          $project->created_by=$req->user_id;
+          $result=$project->save();
+          if($result) {
+            return 'file created';
+          }
+          else {
+            return 'failed';
+          }
         }
+
     }
     public function update(Request $req, $project)
       {
-        $project = Project::find($project);
-        $project->name=$req->name;
-        $project->created_by=$req->created_by;
-        $result=$project->save();
-        if($result) {
-          return 'file updated';
+        if($req->role != '2'){
+            return 'You must be an PRODUCT_OWNER to continue updating projects.';
         }
         else {
-          return 'failed';
+            $project = Project::find($project);
+            $project->name=$req->name;
+            $project->created_by=$req->created_by;
+            $result=$project->save();
+            if($result) {
+              return 'file updated';
+            }
+            else {
+              return 'failed';
+            }
         }
+
     }
     public function patch(Request $req, $project)
     {
-        $project = Project::find($project);
-        if($req->name)
-        {
-          $project->name=$req->name;
+        if($req->role != '2'){
+            return 'You must be an PRODUCT_OWNER to continue updating projects.';
         }
-        if($req->created_by)
-        {
-          $project->created_by=$req->created_by;
+        else{
+            $project = Project::find($project);
+            if($req->name)
+            {
+              $project->name=$req->name;
+            }
+            if($req->created_by)
+            {
+              $project->created_by=$req->created_by;
+            }
+            $result=$project->save();
+            if($result) {
+              return 'file updated';
+            }
+            else {
+              return 'failed';
+            }
         }
-        $result=$project->save();
-        if($result) {
-          return 'file updated';
-        }
-        else {
-          return 'failed';
-        }
+
     }
     public function destroy($project)
     {
-        $project = Project::find($project);
-        $result = $project->delete();
-        if($result){
-          return "records has been deleted";
+        if($req->role != '2'){
+            return 'You must be an PRODUCT_OWNER to continue updating projects.';
         }
-        else {
-          return "error";
+        else{
+            $project = Project::find($project);
+            $result = $project->delete();
+            if($result){
+              return "records has been deleted";
+            }
+            else {
+              return "error";
+            }
         }
     }
 }
