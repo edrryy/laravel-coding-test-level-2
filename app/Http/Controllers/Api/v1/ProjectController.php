@@ -4,13 +4,15 @@ namespace App\Http\Controllers\Api\v1;
 
 use App\Http\Controllers\Controller;
 use App\Models\Project;
+use App\Http\Requests\Project\IndexProject;
 use Illuminate\Http\Request;
 
 class ProjectController extends Controller
 {
-    public function index()
+
+    public function index(IndexProject $form)
     {
-        return Project::all();
+        return response()->json($form->data());
     }
 
     public function show($project)
